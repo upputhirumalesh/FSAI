@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanuman Travels Cars for Self Drive</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Hanuman.jpg') no-repeat center;
+      background-size: cover;
+      text-align: center;
+      padding: 80px 30px;
+      border-bottom: 4px solid #ffcc00;
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-family: Algerian, serif;
+      font-size: 52px;
+      font-weight: bold;
+      color: #000000;
+      text-shadow: 3px 3px 6px grey;
+      background: rgba(255,255,255,0.8);
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 8px;
+      margin: 0;
+    }
+    section {
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 15px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      color: #000000;
+    }
+    h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ffcc00;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+    }
+    .book-btn {
+      background: #28a745;
+      color: white;
+      box-shadow: 0 0 10px rgba(40,167,69,0.7);
+    }
+    .book-btn:hover {
+      background: #218838;
+      box-shadow: 0 0 15px rgba(40,167,69,1);
+    }
+    .pay-btn {
+      background: #007bff;
+      color: white;
+      box-shadow: 0 0 10px rgba(0,123,255,0.7);
+    }
+    .pay-btn:hover {
+      background: #0056b3;
+      box-shadow: 0 0 15px rgba(0,123,255,1);
+    }
+    #vehicle-info, #payment-info {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #ffcc00;
+      display: none;
+      border-radius: 6px;
+      color: #000000;
+    }
+    #vehicle-info img {
+      max-width: 250px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #ffffff;
+      color: #000000;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      border-top: 2px solid #ffcc00;
+      position: relative;
+      z-index: 2;
+    }
+    .overlay-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      font-weight: bold;
+      color: rgba(0,0,0,0.05);
+      text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 0;
+      font-family: Algerian, serif;
+      text-shadow: 2px 2px 4px grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay-text">Hanuman Travels Cars for Self Drive</div>
+
+  <header>
+    <h1>Hanuman Travels Cars for Self Drive</h1>
+    <p>Your trusted travel partner</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>About Us</h2>
+      <ul>
+        <li>Safe, reliable, and comfortable travel services</li>
+        <li>Specialized in family trips, group outings, and corporate travel</li>
+        <li>Experienced drivers with excellent local knowledge</li>
+        <li>Well-maintained vehicles ensuring smooth journeys</li>
+        <li>Affordable pricing with transparent billing</li>
+        <li>24/7 customer support for hassle-free bookings</li>
+        <li>Flexible packages tailored to your travel needs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Available Vehicles</h2>
+      <ul>
+        <li>5-Seater Cars – Perfect for small families or groups</li>
+        <li>7-Seater SUVs – Spacious and comfortable for larger groups</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact Details</h2>
+      <p><strong>Phone:</strong> +91-7075631320</p>
+      <p><strong>Email:</strong> info@hanumantravels.com</p>
+      <p><strong>Address:</strong> Settipalli, Renigunta Road, India</p>
+    </div>
+
+    <div class="card">
+      <h2>Book Your Ride</h2>
+      <button class="btn book-btn" onclick="showVehicles()">Book Vehicle</button>
+      <button class="btn pay-btn" onclick="showPayment()">Make Payment</button>
+
+      <div id="vehicle-info">
+        <h3>Available Comfort & Luxury Vehicles</h3>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <div>
+            <img src="city white.jpg" alt="Honda City">
+            <p><strong>Honda City</strong><br>White Color<br>₹1500–2500 per day</p>
+          </div>
+          <div>
+            <img src="wrv brown.jpg" alt="Honda WR-V">
+            <p><strong>Honda WR-V</strong><br>Brown Color<br>₹1500–2500 per day</p>
+          </div>
+          <div>
+            <img src="ertiga grey.jpg" alt="Maruti Ertiga">
+            <p><strong>Ertiga (7-Seater)</strong><br>Comfortable & Luxury<br>₹2000–3000 per day</p>
+          </div>
+          <div>
+            <img src="innova grey.jpg" alt="Toyota Innova Crysta">
+            <p><strong>Innova (7-Seater)</strong><br>Comfortable & Luxury<br>₹2000–3000 per day</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="payment-info">
+        <h3>Payment Options</h3>
+        <ul>
+          <li><strong>UPI Number:</strong> 7075631320</li>
+          <li><strong>UPI ID:</strong> 705631320-2@ybl</li>
+          <li><strong>Offline Cash Facility</strong></li>
+        </ul>
+        <p>Please choose your preferred payment method at the time of booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Hanuman Travels Cars for Self Drive. All rights reserved.</p>
+  </footer>
+
+    <script>
+      function showVehicles() {
+        document.getElementById("vehicle-info").style.display = "block";
+        document.getElementById("payment-info").style.display = "none";
+      }
+      function showPayment() {
+        document.getElementById("payment-info").style.display = "block";
+        document.getElementById("vehicle-info").style.display = "none";
+      }
+    </script>
+  </body>
+  </html>
